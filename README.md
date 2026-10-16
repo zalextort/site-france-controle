@@ -44,17 +44,10 @@ Dans `contact.html`, la balise `<form id="contact-form">` porte deux attributs :
 
 Déposer l'ensemble des fichiers à la racine de l'hébergement (OVH, o2switch, Netlify, Cloudflare Pages, GitHub Pages…). Le domaine `francecontrole.fr` pointe vers ce site ; le sous-domaine `app.francecontrole.fr` est géré séparément pour l'application.
 
-## Préversion en ligne
+## En ligne
 
-Publiée sur GitHub Pages (branche `main`, racine) avec le domaine https://francecontrole.fr (fichier `CNAME`). DNS chez OVH : enregistrements A/AAAA vers GitHub Pages, `www` en CNAME vers `zalextort.github.io` ; `app` reste dédié à l'application.
-Tant que le contenu n'est pas finalisé, chaque page porte `<meta name="robots" content="noindex">` et `robots.txt` bloque l'indexation : supprimer les deux à la mise en ligne définitive (sauf sur `mentions-legales.html`).
+Publié sur GitHub Pages (branche `main`, racine) avec le domaine https://francecontrole.fr (fichier `CNAME`). DNS chez OVH : enregistrements A/AAAA vers GitHub Pages, `www` en CNAME vers `zalextort.github.io` ; `app` reste dédié à l'application.
 
-## Éléments à compléter
-
-Rechercher `todo` et `à compléter` dans les fichiers HTML :
-
-- horaires (`contact.html`) ;
-- e-mail de contact si différent de `contact@francecontrole.fr` ;
-- historique / présentation détaillée (`qui-sommes-nous.html`, commentaire « À compléter »).
+Les pages sont indexables ; `robots.txt` déclare `sitemap.xml` (à mettre à jour si une page est ajoutée). Seule `mentions-legales.html` reste en `noindex`.
 
 L'en-tête et le pied de page sont dupliqués dans chaque page : toute modification de la navigation est à reporter dans les 6 fichiers.
