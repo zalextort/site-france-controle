@@ -626,3 +626,11 @@ a.val:hover { text-decoration: underline; }
   .split-col, .split-col + .split-col { padding: 32px 0 8px; border-left: 0; }
   .split-col + .split-col { border-top: 1px solid #34424f; margin-top: 32px; }
 }
+
+/* ---------- Espace client désactivé ----------
+   L'application n'est pas encore ouverte : tous les accès (en-tête, pied de page,
+   bloc « Déjà client », page Contact) portent la classe .espace-client.
+   Pour réactiver l'Espace client, supprimer ce bloc. */
+.espace-client { display: none !important; }
+.paths-grid { grid-template-columns: 1fr; }
+.path { padding-right: 0; }
