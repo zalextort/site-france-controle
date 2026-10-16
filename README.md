@@ -55,7 +55,6 @@ Rechercher `todo` et `à compléter` dans les fichiers HTML :
 
 - horaires (`contact.html`) ;
 - e-mail de contact si différent de `contact@francecontrole.fr` ;
-- informations légales et hébergeur (`mentions-legales.html`) ;
 - historique / présentation détaillée (`qui-sommes-nous.html`, commentaire « À compléter »).
 
 L'en-tête et le pied de page sont dupliqués dans chaque page : toute modification de la navigation est à reporter dans les 6 fichiers.
