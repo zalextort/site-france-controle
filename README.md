@@ -51,9 +51,9 @@ Tant que le contenu n'est pas finalisé, chaque page porte `<meta name="robots" 
 
 ## Éléments à compléter
 
-Rechercher `[` et `00 00 00 00 00` dans les fichiers HTML :
+Rechercher `todo` et `à compléter` dans les fichiers HTML :
 
-- téléphone, adresse, horaires (pied de page de chaque page + `contact.html`) ;
+- horaires (`contact.html`) ;
 - e-mail de contact si différent de `contact@francecontrole.fr` ;
 - informations légales et hébergeur (`mentions-legales.html`) ;
 - historique / présentation détaillée (`qui-sommes-nous.html`, commentaire « À compléter »).
