@@ -627,10 +627,39 @@ a.val:hover { text-decoration: underline; }
   .split-col + .split-col { border-top: 1px solid #34424f; margin-top: 32px; }
 }
 
-/* ---------- Espace client désactivé ----------
-   L'application n'est pas encore ouverte : tous les accès (en-tête, pied de page,
-   bloc « Déjà client », page Contact) portent la classe .espace-client.
-   Pour réactiver l'Espace client, supprimer ce bloc. */
-.espace-client { display: none !important; }
-.paths-grid { grid-template-columns: 1fr; }
-.path { padding-right: 0; }
+/* ---------- Espace client : bientôt disponible ----------
+   Piloté par ESPACE_CLIENT_OUVERT dans assets/js/main.js. Tant qu'il vaut false,
+   <html> porte la classe .client-soon : étiquette « Bientôt » visible et clic
+   remplacé par un message. */
+.soon, .soon-note { display: none; }
+.client-soon .soon {
+  display: inline-block;
+  margin-left: 2px;
+  padding: 2px 7px;
+  font: 500 0.68rem/1.4 var(--mono);
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  background: var(--signal-soft);
+  color: #6b4a00;
+  vertical-align: middle;
+}
+.client-soon .site-footer .soon { background: #2c3a46; color: #e6e9ec; }
+.client-soon .soon-note { display: block; margin-top: -16px; font-family: var(--mono); font-size: .8rem; color: #8e99a3; }
+.soon-toast {
+  position: fixed; left: 50%; bottom: 24px; z-index: 300;
+  transform: translate(-50%, 16px); opacity: 0; visibility: hidden;
+  width: min(460px, calc(100vw - 32px));
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px; align-items: start;
+  padding: 18px 20px; background: var(--ink); color: #e6e9ec;
+  border-left: 6px solid var(--signal);
+  box-shadow: 0 18px 40px -12px rgba(17, 26, 34, .45);
+  transition: opacity .2s, transform .2s, visibility .2s;
+}
+.soon-toast.is-visible { opacity: 1; visibility: visible; transform: translate(-50%, 0); }
+.soon-toast strong { color: #fff; display: block; margin-bottom: 4px; }
+.soon-toast a { color: #fff; }
+.soon-toast button {
+  background: none; border: 0; color: #e6e9ec; font: 400 1.4rem/1 var(--sans);
+  cursor: pointer; padding: 0 4px; min-width: 32px; min-height: 32px;
+}
+.soon-toast :focus-visible { outline-color: var(--signal); }

@@ -2,6 +2,9 @@
 (function () {
   "use strict";
 
+  // Espace client : passer à true le jour où l'application app.francecontrole.fr ouvre.
+  var ESPACE_CLIENT_OUVERT = false;
+
   var MOIS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"];
 
   /* ---------- Menu mobile ---------- */
@@ -22,6 +25,47 @@
         setOpen(false);
         toggle.focus();
       }
+    });
+  }
+
+  /* ---------- Espace client : bientôt disponible ---------- */
+  if (!ESPACE_CLIENT_OUVERT) {
+    document.documentElement.classList.add("client-soon");
+    var toast = null, toastTimer = null, lastTrigger = null;
+    function hideToast() {
+      if (!toast) return;
+      toast.classList.remove("is-visible");
+      clearTimeout(toastTimer);
+    }
+    function showToast(trigger) {
+      lastTrigger = trigger;
+      if (!toast) {
+        toast = document.createElement("div");
+        toast.className = "soon-toast";
+        toast.setAttribute("role", "status");
+        toast.innerHTML = "<div><strong>L'espace client arrive bientôt.</strong>" +
+          "Vous pourrez y consulter vos rapports et vos prochaines échéances. " +
+          "D'ici là, contactez-nous au <a href=\"tel:+33623483571\">06 23 48 35 71</a>.</div>" +
+          "<button type=\"button\" aria-label=\"Fermer le message\">×</button>";
+        document.body.appendChild(toast);
+        toast.querySelector("button").addEventListener("click", function () {
+          hideToast();
+          if (lastTrigger) lastTrigger.focus();
+        });
+      }
+      toast.classList.add("is-visible");
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(hideToast, 7000);
+    }
+    document.addEventListener("click", function (e) {
+      var link = e.target.closest && e.target.closest("a[href^=\"https://app.francecontrole.fr\"]");
+      if (!link) return;
+      e.preventDefault();
+      if (nav && nav.classList.contains("is-open") && toggle) toggle.click();
+      showToast(link);
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") hideToast();
     });
   }
 
