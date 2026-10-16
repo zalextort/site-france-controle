@@ -46,7 +46,7 @@ Déposer l'ensemble des fichiers à la racine de l'hébergement (OVH, o2switch, 
 
 ## Préversion en ligne
 
-Publiée sur GitHub Pages : https://zalextort.github.io/site-france-controle/ (branche `main`, racine).
+Publiée sur GitHub Pages (branche `main`, racine) avec le domaine https://francecontrole.fr (fichier `CNAME`). DNS chez OVH : enregistrements A/AAAA vers GitHub Pages, `www` en CNAME vers `zalextort.github.io` ; `app` reste dédié à l'application.
 Tant que le contenu n'est pas finalisé, chaque page porte `<meta name="robots" content="noindex">` et `robots.txt` bloque l'indexation : supprimer les deux à la mise en ligne définitive (sauf sur `mentions-legales.html`).
 
 ## Éléments à compléter
