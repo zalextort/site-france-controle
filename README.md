@@ -28,7 +28,7 @@ puis aller sur http://localhost:8000.
 
 ## Parti pris graphique
 
-- Polices : Archivo (variable, largeur 62–125 %) pour titres et texte, IBM Plex Mono pour références, index et échéances — chargées depuis Google Fonts.
+- Polices : Archivo (variable, largeur 62–125 %) pour titres et texte, IBM Plex Mono pour références, index et échéances — hébergées dans `assets/fonts/` (sous-ensembles latin et latin étendu, licence SIL OFL jointe). Aucun appel à Google Fonts.
 - Couleurs (variables en tête de `style.css`) : papier `#f4f2ed`, encre `#111a22`, jaune signal `#f9a800` réservé à l'action principale et aux mois poinçonnés.
 - Le macaron (logo + outil « À quelle fréquence vérifier votre matériel ? ») reprend la pastille de VGP poinçonnée. Les périodicités de l'outil sont définies dans `assets/js/main.js` (objet `EQUIPEMENTS`).
 - Le bouton « Faire vérifier ce matériel » ouvre `contact.html?materiel=…` : le formulaire est pré-rempli. `?objet=…` présélectionne l'objet.
