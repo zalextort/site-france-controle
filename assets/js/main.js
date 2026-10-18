@@ -3,7 +3,7 @@
   "use strict";
 
   // Espace client : passer à true le jour où l'application app.francecontrole.fr ouvre.
-  var ESPACE_CLIENT_OUVERT = false;
+  var ESPACE_CLIENT_OUVERT = true;
 
   var MOIS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"];
 
