@@ -2,7 +2,7 @@
 (function () {
   "use strict";
 
-  // Espace client : passer à true le jour où l'application app.francecontrole.fr ouvre.
+  // Espace client : passer à true le jour où l'application vgp.francecontrole.fr ouvre.
   var ESPACE_CLIENT_OUVERT = true;
 
   var MOIS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"];
@@ -58,7 +58,7 @@
       toastTimer = setTimeout(hideToast, 7000);
     }
     document.addEventListener("click", function (e) {
-      var link = e.target.closest && e.target.closest("a[href^=\"https://app.francecontrole.fr\"]");
+      var link = e.target.closest && e.target.closest("a[href^=\"https://vgp.francecontrole.fr\"]");
       if (!link) return;
       e.preventDefault();
       if (nav && nav.classList.contains("is-open") && toggle) toggle.click();

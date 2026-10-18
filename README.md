@@ -1,6 +1,6 @@
 # France Contrôle — site vitrine
 
-Site statique (HTML / CSS / JS, sans dépendance ni étape de build), indépendant de l'application métier hébergée sur `app.francecontrole.fr`.
+Site statique (HTML / CSS / JS, sans dépendance ni étape de build), indépendant de l'application métier hébergée sur `vgp.francecontrole.fr`.
 
 ## Structure
 
@@ -42,7 +42,7 @@ Dans `contact.html`, la balise `<form id="contact-form">` porte deux attributs :
 
 ## Mise en ligne
 
-Déposer l'ensemble des fichiers à la racine de l'hébergement (OVH, o2switch, Netlify, Cloudflare Pages, GitHub Pages…). Le domaine `francecontrole.fr` pointe vers ce site ; le sous-domaine `app.francecontrole.fr` est géré séparément pour l'application.
+Déposer l'ensemble des fichiers à la racine de l'hébergement (OVH, o2switch, Netlify, Cloudflare Pages, GitHub Pages…). Le domaine `francecontrole.fr` pointe vers ce site ; le sous-domaine `vgp.francecontrole.fr` est géré séparément pour l'application.
 
 ## En ligne
 
